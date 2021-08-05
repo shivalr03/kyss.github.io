@@ -1,0 +1,110 @@
+// @import url('https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap');
+
+$brandBlueOne: #6851FF;
+$brandBlueTwo: #4537A1;
+$brandGreen: #5EEDA3;
+$background: #fff;
+$fontPrimary: #000;
+$fontTitle: #110656;
+$fontwhite: #fff;
+$fontWhite-60: rgba(255, 255, 255, 0.60);
+$font-60: rgba(17, 6, 86, 0.6);
+$placeholder: rgba(31, 31, 31, 0.30);
+$fontfamilyLato: 'Lato', sans-serif;
+$fontfamilyRoboto: 'Roboto', sans-serif;
+
+$bgblue: #020a1c;
+$lightgrey: #eff4ff;
+
+$borderColor: #dcdcdc;
+$error: #e95252;
+
+$blueGradient: linear-gradient(209.76deg, #6851FF 18.19%, #4537A2 103.81%);
+// background-color: #1e5799;
+// @include filter-gradient(#6851FF, #4537A2, horizontal);
+// $gradient:background-image(linear-gradient(left bottom,  #4537A2 18%,#4537A2 105%));
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == mid-desktop {
+    @media only screen and (max-width: 90em) {
+      @content;
+    } //1440px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}
+$transition600: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+$transition600-1: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+@mixin fontRender($color, $size, $weight, $lineHeight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+body,
+html {
+  font-family: "Muli", sans-serif;
+}
+
+body {
+  
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.btn-brandgreen {
+  @include fontRender(#fff, 2rem, 700, 0);
+  letter-spacing: 0.05rem;
+  background-color: $brandGreen;
+  border-color: $brandGreen;
+  border-radius: 3px;
+  padding: 0.7rem 2rem;
+  text-transform: capitalize;
+  transition: $transition600-1;
+  text-decoration: none;
+  border-radius: 7rem;
+  padding: 3rem 6rem;
+  &:hover{
+      text-decoration: none;
+      background-color: #4dca8a;
+
+  }
+  // box-shadow: 0px 10px 30px 10px rgba(97, 162, 240, 0.48);
+}
+
+.section-title {
+  font-size: 2.175rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  color: $fontTitle;
+  margin-bottom: 1.075rem;
+}
+.section-desc {
+  color: $fontWhite-60;
+  line-height: 1.85rem;
+  font-size: 1.125rem;
+  margin-bottom: 2.175rem;
+}
+}

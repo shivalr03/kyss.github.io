@@ -1,0 +1,418 @@
+@import "root";
+
+body {
+  overflow-x: hidden !important;
+  color: #020a1c;
+}
+@keyframes twinkle-star {
+    from {transform: scale(1); }
+    to {transform: scale(1.5); }
+  }
+  @keyframes twinkle-star-small {
+    from {transform: scale(1); }
+    to {transform: scale(0.8); }
+  }
+  @keyframes float {
+    from {transform: translate(0rem, 2rem);}
+    to {    transform: translate(1rem, 0); }
+  }
+.section-title {
+    font-family: $fontfamilyLato;
+    margin-bottom: 1.6rem;
+    @include fontRender($fontTitle, 3.2rem, 700, 4rem);
+  }
+@mixin para {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.67;
+  color: #424855;
+}
+html {
+  scroll-behavior: smooth;
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+@mixin subhead {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: $fontTitle;
+}
+
+header{
+    background-color: $background;
+    .navbar{
+        padding: 2rem 10%;
+        @include respond(tab-land){
+            padding: 2rem 5%;
+        }
+        .navbar-brand{
+            max-width: 15rem;
+            img{
+                width: 100%;
+            }
+        }
+        .navbar-collapse{
+            justify-content: space-between;
+            font-size: 1.6rem;
+            .navbar-nav{
+                padding-left: 5rem;
+                .nav-item{
+                    padding: 0 0 0 2rem;
+                }
+            }
+        }
+    }
+}
+main{
+    background-color: $background;
+    .banner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12rem 10% 6rem;
+        background-color: $background;
+        position: relative;
+        @include respond(tab-land){
+            padding: 12rem 5% 6rem;
+        }
+        @include respond(phone){
+            flex-direction: column;
+            padding-top: 6rem;
+        }
+        .twinkle{
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            // animation: twinkle-sta;
+            animation-name: twinkle-star;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            @include respond(phone){
+                display: none;
+            }
+        }
+        .twinkle-1{
+            top: 30%;
+            left: 45%;
+            animation-name: twinkle-star-small;
+            animation-delay: 1s;
+        }
+        .twinkle-2{
+            top: 75%;
+            left: 93%;
+            @include respond(tab-land){
+                left: 97%;
+            }
+        }
+        .twinkle-3{
+            top: 90%;
+            left: 95%;
+            animation-name: twinkle-star-small;
+            animation-delay: 1s;
+        }
+        .float{
+            position: absolute;
+            bottom: 10%;
+            left: 45%;
+                animation-name: float;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+                @include respond(tab-land){
+                    left: 40%;
+                }
+                @include respond(phone){
+                    display: none;
+                }
+        }
+        .float-1{
+            bottom: 50%;
+            left: 95%;
+            animation-delay: 1s;
+            @include respond(tab-land){
+                left: 96%;
+            }
+            
+        }
+        .left{
+            width: 40%;
+            @include respond(tab-land){
+                width: 50%;
+            }
+            @include respond(phone){
+                width: 100%;
+            }
+            .banner-title{
+                @include fontRender($fontTitle, 5.6rem, 700, 7.8rem);
+                font-family: $fontfamilyLato;
+                .highlight{
+                    color: $brandBlueOne;
+                }
+            }
+            .banner-desc{
+                @include fontRender($fontPrimary, 1.8rem, 500, 1.4);
+                padding-top: 2rem;
+            }
+        }
+        .right{
+            width: 40%;
+            @include respond(phone){
+                width: 100%;
+                padding-top: 3rem;
+            }
+            .banner-img{
+                max-width: 100%;
+            }
+        }
+    }
+    .section-1{
+        padding: 6rem 10%;
+        @include respond(tab-land){
+            padding: 6rem 5%;
+        }
+        .section-title{
+                text-align: center;
+                font-size: 5.6rem;
+                font-weight: 700;
+            .breaknewline{
+                @include respond(tab-port){
+                    display: none;
+                }
+            }
+        }
+        .main-box{
+            display: grid;
+            grid-gap: 0 4rem;
+            grid-template-columns: repeat(3, 1fr);
+            padding-top: 3rem;
+            @include respond(phone){
+                grid-template-columns: 1fr;
+                grid-gap: 3rem 0;
+            }
+            .stat{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                
+                .stat-number{
+                    font-size: 5.4rem;
+                    text-align: center;
+                    font-weight: 700;
+                    color: $brandBlueOne;
+                    line-height: 1.7;
+                }
+                &:last-child{
+                   .stat-number{
+                      position: relative;
+                      &::after{
+                          content: "Million";
+                          position: absolute;
+                          top: 25%;
+                          left: 140%;
+                          font-size: 2rem;
+                          font-weight: 400;
+                      }
+                   }
+                }
+                .stat-title{
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    color: $fontPrimary;
+                }
+            }
+        }
+    }
+    .section-4{
+        padding: 6rem 10%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+        background: $blueGradient;
+        @include respond(phone){
+            padding: 6rem 5%;
+        }
+        .message{
+            @include fontRender($fontwhite, 2rem, 500, 1.4);
+        }
+        .section-title{
+            @include fontRender($fontwhite, 5.6rem, 700, 6.7rem);
+        }
+        .desc{
+            @include fontRender($fontWhite-60, 1.6rem, 500, 1.4);
+            
+        }
+        .main-box{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0 3rem;
+            padding-top: 5rem;
+            @include respond(phone){
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 0 3rem;
+            }
+            .box{
+                .box-img{
+                    margin-bottom: 2rem
+                }
+                .content{
+                    @include fontRender($fontwhite, 1.6rem, 500, 1.4);
+                }
+            }
+        }
+        .cta{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5rem;
+            .cta-btn{
+                color: $fontPrimary;
+            }
+        }
+    }
+    .section-5{
+        display: flex;
+        flex-direction: column;
+        padding: 6rem 10%;
+        @include respond(tab-land){
+            padding: 6rem 5%;
+        }
+        .section-title{
+            @include fontRender($fontPrimary, 5.6rem, 700, 6.7rem);
+            width: 45%;
+            @include respond(phone){
+                width: 100%;
+            }
+            .highlight{
+                color: $brandBlueOne;
+            }
+        }
+        .sec-desc{
+            @include fontRender($fontPrimary, 2.2rem, 500, 1.4);
+        }
+        .main-box{
+            padding-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0 6rem;
+            @include respond(phone){
+                grid-template-columns: 1fr;
+                grid-gap: 3rem 0;
+            }
+            .box{
+                .box-img{}
+                .box-title{
+                    @include fontRender($fontTitle, 2.8rem, 700, 1.4);
+                    padding: 2rem 0;
+                    .highlight{
+                        color: rgba(104, 81, 255, 0.4);
+                    }
+                }
+                .content{
+                    @include fontRender($font-60, 1.8rem, 500, 1.4);
+                }
+            }
+        }
+    }
+    .section-6{
+        padding: 6rem 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include respond(tab-land){
+            padding: 6rem 5%;
+        }
+        .section-title{
+            @include fontRender($fontTitle, 4.8rem, 700, 6.7rem);
+            padding-bottom: 3rem;
+        }
+        .main-box{
+            width: 70%;
+            @include respond(phone){
+                width: 100%;
+            }
+            .accordion{
+                .accordion-item{
+                    background: transparent;
+                    box-shadow: none;
+                    border: none;
+                    margin-bottom: 3rem;
+                    box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.1);
+                    border-radius: 12px;
+                    .accordion-header{
+                        
+                        .accordion-button, .show{
+                            @include fontRender($fontTitle, 1.8rem, 700, 1.4);
+                            height: 7rem;
+                            box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.1);
+                            border-radius: 12px;
+                            box-shadow: none;
+                            border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+                        .accordion-button::after {
+                            background-image: url(../img/plus.svg);
+                        }
+                        .accordion-button:not(.collapsed)::after {
+                            background-image: url(../img/plus.svg);
+                            transform: rotate(225deg);
+                        }
+                        .collapsed{
+                            border-radius: 12px;
+                        }
+                    }
+                    .accordion-collapse{
+                        background-color: #fff;
+                        
+                        @include fontRender($font-60, 1.6rem, 500, 1.4);
+                        .accordion-body{
+                            padding: 3rem 30% 3rem 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section-7{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12rem 10%;
+        flex-direction: column;
+        background: $blueGradient;
+        text-align: center;
+        @include respond(phone){
+            padding: 12rem 5%;
+        }
+        .section-title{
+            @include fontRender($fontwhite, 4.8rem, 700, 6.7rem);
+        }
+        .sec-desc{
+            @include fontRender($fontWhite-60, 1.8rem, 500, 1.4);
+            margin-bottom: 7rem;
+        }
+        .cta{
+            .cta-btn{
+                padding: 2rem 4rem;
+                color: $fontPrimary;
+            }
+        }
+    }
+}
