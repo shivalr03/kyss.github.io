@@ -92,62 +92,6 @@ main{
             flex-direction: column;
             padding-top: 6rem;
         }
-        .twinkle{
-            position: absolute;
-            top: 15%;
-            left: 50%;
-            // animation: twinkle-sta;
-            animation-name: twinkle-star;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate-reverse;
-            @include respond(phone){
-                display: none;
-            }
-        }
-        .twinkle-1{
-            top: 30%;
-            left: 45%;
-            animation-name: twinkle-star-small;
-            animation-delay: 1s;
-        }
-        .twinkle-2{
-            top: 75%;
-            left: 93%;
-            @include respond(tab-land){
-                left: 97%;
-            }
-        }
-        .twinkle-3{
-            top: 90%;
-            left: 95%;
-            animation-name: twinkle-star-small;
-            animation-delay: 1s;
-        }
-        .float{
-            position: absolute;
-            bottom: 10%;
-            left: 45%;
-                animation-name: float;
-                animation-duration: 1.5s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate-reverse;
-                @include respond(tab-land){
-                    left: 40%;
-                }
-                @include respond(phone){
-                    display: none;
-                }
-        }
-        .float-1{
-            bottom: 50%;
-            left: 95%;
-            animation-delay: 1s;
-            @include respond(tab-land){
-                left: 96%;
-            }
-            
-        }
         .left{
             width: 40%;
             @include respond(tab-land){
@@ -166,6 +110,36 @@ main{
             .banner-desc{
                 @include fontRender($fontPrimary, 1.8rem, 500, 1.4);
                 padding-top: 2rem;
+            }
+            form{
+                display: grid;
+                    grid-template-columns: 60% 30%;
+                    margin-top: 3rem;
+                .gstInp{
+                    
+                    input{
+                        height: 5rem;
+                        line-height: 1.4;
+                        color: $brandBlueTwo;
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                        text-transform: uppercase;
+                        &::placeholder{
+                            opacity: 0.7;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+                .cta{
+                    height: 5rem;
+                    background-color: $brandBlueOne;
+                    font-weight:bold;
+                    font-size: 1.6rem;
+                    padding: 0.8rem 2rem;
+                    border-radius: 3rem;
+                    margin-left: 2rem;
+                }
             }
         }
         .right{

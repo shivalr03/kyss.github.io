@@ -223,92 +223,6 @@ main .banner {
   }
 }
 
-main .banner .twinkle {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  -webkit-animation-name: twinkle-star;
-          animation-name: twinkle-star;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-
-@media only screen and (max-width: 37.5em) {
-  main .banner .twinkle {
-    display: none;
-  }
-}
-
-main .banner .twinkle-1 {
-  top: 30%;
-  left: 45%;
-  -webkit-animation-name: twinkle-star-small;
-          animation-name: twinkle-star-small;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-main .banner .twinkle-2 {
-  top: 75%;
-  left: 93%;
-}
-
-@media only screen and (max-width: 75em) {
-  main .banner .twinkle-2 {
-    left: 97%;
-  }
-}
-
-main .banner .twinkle-3 {
-  top: 90%;
-  left: 95%;
-  -webkit-animation-name: twinkle-star-small;
-          animation-name: twinkle-star-small;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-main .banner .float {
-  position: absolute;
-  bottom: 10%;
-  left: 45%;
-  -webkit-animation-name: float;
-          animation-name: float;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-
-@media only screen and (max-width: 75em) {
-  main .banner .float {
-    left: 40%;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  main .banner .float {
-    display: none;
-  }
-}
-
-main .banner .float-1 {
-  bottom: 50%;
-  left: 95%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-@media only screen and (max-width: 75em) {
-  main .banner .float-1 {
-    left: 96%;
-  }
-}
-
 main .banner .left {
   width: 40%;
 }
@@ -343,6 +257,57 @@ main .banner .left .banner-desc {
   font-weight: 500;
   line-height: 1.4;
   padding-top: 2rem;
+}
+
+main .banner .left form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 30%;
+      grid-template-columns: 60% 30%;
+  margin-top: 3rem;
+}
+
+main .banner .left form .gstInp input {
+  height: 5rem;
+  line-height: 1.4;
+  color: #4537A1;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+main .banner .left form .gstInp input::-webkit-input-placeholder {
+  opacity: 0.7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+main .banner .left form .gstInp input:-ms-input-placeholder {
+  opacity: 0.7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+main .banner .left form .gstInp input::-ms-input-placeholder {
+  opacity: 0.7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+main .banner .left form .gstInp input::placeholder {
+  opacity: 0.7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+main .banner .left form .cta {
+  height: 5rem;
+  background-color: #6851FF;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 0.8rem 2rem;
+  border-radius: 3rem;
+  margin-left: 2rem;
 }
 
 main .banner .right {
