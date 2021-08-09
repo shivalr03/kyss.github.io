@@ -173,6 +173,7 @@ main{
             grid-gap: 0 4rem;
             grid-template-columns: repeat(3, 1fr);
             padding-top: 3rem;
+            align-items: baseline;
             @include respond(phone){
                 grid-template-columns: 1fr;
                 grid-gap: 3rem 0;
@@ -205,11 +206,28 @@ main{
                 }
                 .stat-title{
                     text-align: center;
-                    font-weight: 700;
+                    font-weight: 500;
                     font-size: 1.5rem;
                     color: $fontPrimary;
                 }
             }
+        }
+    }
+    .section-2{
+        padding: 6rem 10%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+        @include respond(phone){
+            padding: 6rem 5%;
+        }
+        .section-title{
+            text-align: center;
+    font-size: 5.6rem;
+    font-weight: 700;
+    padding-bottom: 5rem;
         }
     }
     .section-4{
@@ -388,5 +406,12 @@ main{
                 color: $fontPrimary;
             }
         }
+    }
+}
+.error{
+    border: 2px solid #ff623e;
+    &:focus{
+        border: 2px solid #ff623e;
+        box-shadow: none;
     }
 }
