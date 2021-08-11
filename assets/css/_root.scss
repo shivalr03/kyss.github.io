@@ -24,6 +24,34 @@ $blueGradient: linear-gradient(209.76deg, #6851FF 18.19%, #4537A2 103.81%);
 // @include filter-gradient(#6851FF, #4537A2, horizontal);
 // $gradient:background-image(linear-gradient(left bottom,  #4537A2 18%,#4537A2 105%));
 
+/*Silka Fonts Starts*/
+@font-face{ 
+	font-family: 'silka-black';
+	src: url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.eot');
+	src: url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.woff') format('woff'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.woff2') format('woff'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.ttf') format('truetype'),
+}
+
+@font-face{ 
+	font-family: 'silka-regular';
+	src: url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.eot');
+	src: url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.woff') format('woff'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.woff2') format('woff'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.ttf') format('truetype'),
+}
+@font-face{ 
+	font-family: 'silka-bold';
+	src: url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.eot');
+	src: url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.woff') format('woff'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.woff2') format('woff'),
+	     url('../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.ttf') format('truetype'),
+}
+/*Silka Fonts Ends*/
+
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
@@ -63,7 +91,7 @@ $transition600-1: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 
 body,
 html {
-  font-family: "Muli", sans-serif;
+  font-family: "silka-regular", Arial, sans-serif;
 }
 
 body {

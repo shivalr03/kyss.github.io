@@ -1,6 +1,26 @@
+/*Silka Fonts Starts*/
+@font-face {
+  font-family: 'silka-black';
+  src: url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.eot");
+  src: url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.eot?#iefix") format("embedded-opentype"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.woff") format("woff"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.woff2") format("woff"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-black-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'silka-regular';
+  src: url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.eot");
+  src: url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.woff") format("woff"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.woff2") format("woff"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-regular-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'silka-bold';
+  src: url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.eot");
+  src: url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.woff") format("woff"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.woff2") format("woff"), url("../Silka-Complete-Webfont/Silka-Roman-Webfont/silka-bold-webfont.ttf") format("truetype");
+}
+
+/*Silka Fonts Ends*/
 body,
 html {
-  font-family: "Muli", sans-serif;
+  font-family: "silka-regular", Arial, sans-serif;
 }
 
 body input:-webkit-autofill,
@@ -120,7 +140,7 @@ body {
 }
 
 .section-title {
-  font-family: "Lato", sans-serif;
+  font-family: "silka-bold", Arial, sans-serif;
   margin-bottom: 1.6rem;
   color: #110656;
   font-size: 3.2rem;
@@ -224,7 +244,7 @@ main .banner {
 }
 
 main .banner .left {
-  width: 40%;
+  width: 45%;
 }
 
 @media only screen and (max-width: 75em) {
@@ -244,7 +264,7 @@ main .banner .left .banner-title {
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 7.8rem;
-  font-family: "Lato", sans-serif;
+  font-family: "silka-bold", Arial, sans-serif;
 }
 
 main .banner .left .banner-title .highlight {
@@ -325,6 +345,92 @@ main .banner .right .banner-img {
   max-width: 100%;
 }
 
+main .message-section {
+  padding: 8rem 10% 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(209.76deg, #6851FF 18.19%, #4537A2 103.81%);
+}
+
+main .message-section .section-title {
+  text-align: left;
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  width: 50%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  main .message-section .section-title .breaknewline {
+    display: none;
+  }
+}
+
+main .message-section .form-box {
+  width: 50%;
+}
+
+main .message-section .form-box form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 30%;
+      grid-template-columns: 60% 30%;
+  margin-top: 3rem;
+}
+
+main .message-section .form-box form .gstInp input {
+  height: 5rem;
+  line-height: 1.4;
+  color: #4537A1;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+main .message-section .form-box form .gstInp input::-webkit-input-placeholder {
+  opacity: 0.7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+main .message-section .form-box form .gstInp input:-ms-input-placeholder {
+  opacity: 0.7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+main .message-section .form-box form .gstInp input::-ms-input-placeholder {
+  opacity: 0.7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+main .message-section .form-box form .gstInp input::placeholder {
+  opacity: 0.7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+main .message-section .form-box form .cta {
+  height: 5rem;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  padding: 0.8rem 2rem;
+  border-radius: 3rem;
+  margin-left: 2rem;
+  border: 1px solid #fff;
+}
+
 main .section-1 {
   padding: 6rem 10%;
 }
@@ -384,7 +490,7 @@ main .section-1 .main-box .stat {
 }
 
 main .section-1 .main-box .stat .stat-number {
-  font-size: 5.4rem;
+  font-size: 12rem;
   text-align: center;
   font-weight: 700;
   color: #6851FF;
@@ -533,7 +639,7 @@ main .section-5 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 6rem 10%;
+  padding: 6rem 10% 15rem;
 }
 
 @media only screen and (max-width: 75em) {
@@ -547,7 +653,8 @@ main .section-5 .section-title {
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 6.7rem;
-  width: 45%;
+  width: 100%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -565,6 +672,7 @@ main .section-5 .sec-desc {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.4;
+  text-align: center;
 }
 
 main .section-5 .main-box {
@@ -582,6 +690,10 @@ main .section-5 .main-box {
         grid-template-columns: 1fr;
     grid-gap: 3rem 0;
   }
+}
+
+main .section-5 .main-box .box .box-img {
+  width: 20rem;
 }
 
 main .section-5 .main-box .box .box-title {

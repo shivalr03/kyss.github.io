@@ -17,7 +17,7 @@ body {
     to {    transform: translate(1rem, 0); }
   }
 .section-title {
-    font-family: $fontfamilyLato;
+    font-family: "silka-bold", Arial, sans-serif;
     margin-bottom: 1.6rem;
     @include fontRender($fontTitle, 3.2rem, 700, 4rem);
   }
@@ -93,7 +93,7 @@ main{
             padding-top: 6rem;
         }
         .left{
-            width: 40%;
+            width: 45%;
             @include respond(tab-land){
                 width: 50%;
             }
@@ -102,7 +102,7 @@ main{
             }
             .banner-title{
                 @include fontRender($fontTitle, 5.6rem, 700, 7.8rem);
-                font-family: $fontfamilyLato;
+                font-family: "silka-bold", Arial, sans-serif;
                 .highlight{
                     color: $brandBlueOne;
                 }
@@ -153,6 +153,61 @@ main{
             }
         }
     }
+    .message-section{
+        padding: 8rem 10% 12rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(209.76deg, #6851FF 18.19%, #4537A2 103.81%);
+        .section-title{
+            text-align: left;
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: $fontwhite;
+            width: 50%;
+        .breaknewline{
+            @include respond(tab-port){
+                display: none;
+            }
+        }
+    }
+    .form-box{
+        width: 50%;
+        form{
+            display: grid;
+                grid-template-columns: 60% 30%;
+                margin-top: 3rem;
+            .gstInp{
+                
+                input{
+                    height: 5rem;
+                    line-height: 1.4;
+                    color: $brandBlueTwo;
+                    font-weight: bold;
+                    font-size: 1.8rem;
+                    text-transform: uppercase;
+                    &::placeholder{
+                        opacity: 0.7;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .cta{
+                height: 5rem;
+                background-color: transparent;
+                font-weight:600;
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+                padding: 0.8rem 2rem;
+                border-radius: 3rem;
+                margin-left: 2rem;
+                border: 1px solid #fff;
+            }
+        }
+    }
+    }
     .section-1{
         padding: 6rem 10%;
         @include respond(tab-land){
@@ -185,7 +240,7 @@ main{
                 justify-content: space-between;
                 
                 .stat-number{
-                    font-size: 5.4rem;
+                    font-size: 12rem;
                     text-align: center;
                     font-weight: 700;
                     color: $brandBlueOne;
@@ -282,13 +337,14 @@ main{
     .section-5{
         display: flex;
         flex-direction: column;
-        padding: 6rem 10%;
+        padding: 6rem 10% 15rem;
         @include respond(tab-land){
             padding: 6rem 5%;
         }
         .section-title{
             @include fontRender($fontPrimary, 5.6rem, 700, 6.7rem);
-            width: 45%;
+            width: 100%;
+            text-align: center;
             @include respond(phone){
                 width: 100%;
             }
@@ -298,6 +354,7 @@ main{
         }
         .sec-desc{
             @include fontRender($fontPrimary, 2.2rem, 500, 1.4);
+            text-align: center;
         }
         .main-box{
             padding-top: 5rem;
@@ -309,7 +366,9 @@ main{
                 grid-gap: 3rem 0;
             }
             .box{
-                .box-img{}
+                .box-img{
+                    width: 20rem;
+                }
                 .box-title{
                     @include fontRender($fontTitle, 2.8rem, 700, 1.4);
                     padding: 2rem 0;
