@@ -383,60 +383,49 @@ main{
         }
     }
     .section-6{
-        padding: 6rem 10%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        padding: 6rem 10% 15rem;
         @include respond(tab-land){
             padding: 6rem 5%;
         }
         .section-title{
-            @include fontRender($fontTitle, 4.8rem, 700, 6.7rem);
-            padding-bottom: 3rem;
-        }
-        .main-box{
-            width: 70%;
+            @include fontRender($fontPrimary, 5.6rem, 700, 6.7rem);
+            width: 100%;
+            text-align: center;
             @include respond(phone){
                 width: 100%;
             }
-            .accordion{
-                .accordion-item{
-                    background: transparent;
-                    box-shadow: none;
-                    border: none;
-                    margin-bottom: 3rem;
-                    box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.1);
-                    border-radius: 12px;
-                    .accordion-header{
-                        
-                        .accordion-button, .show{
-                            @include fontRender($fontTitle, 1.8rem, 700, 1.4);
-                            height: 7rem;
-                            box-shadow: 2px 2px 9px 2px rgba(0, 0, 0, 0.1);
-                            border-radius: 12px;
-                            box-shadow: none;
-                            border-bottom-left-radius: 0;
-                            border-bottom-right-radius: 0;
-                        }
-                        .accordion-button::after {
-                            background-image: url(../img/plus.svg);
-                        }
-                        .accordion-button:not(.collapsed)::after {
-                            background-image: url(../img/plus.svg);
-                            transform: rotate(225deg);
-                        }
-                        .collapsed{
-                            border-radius: 12px;
-                        }
+            .highlight{
+                color: $brandBlueOne;
+            }
+        }
+        .sec-desc{
+            @include fontRender($fontPrimary, 2.2rem, 500, 1.4);
+            text-align: center;
+        }
+        .main-box{
+            padding-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0 6rem;
+            @include respond(phone){
+                grid-template-columns: 1fr;
+                grid-gap: 3rem 0;
+            }
+            .box{
+                .box-img{
+                    width: 20rem;
+                }
+                .box-title{
+                    @include fontRender($fontTitle, 2.8rem, 700, 1.4);
+                    padding: 2rem 0;
+                    .highlight{
+                        color: rgba(104, 81, 255, 0.4);
                     }
-                    .accordion-collapse{
-                        background-color: #fff;
-                        
-                        @include fontRender($font-60, 1.6rem, 500, 1.4);
-                        .accordion-body{
-                            padding: 3rem 30% 3rem 3rem;
-                        }
-                    }
+                }
+                .content{
+                    @include fontRender($font-60, 1.8rem, 500, 1.4);
                 }
             }
         }
