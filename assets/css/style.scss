@@ -93,7 +93,7 @@ main{
             padding-top: 6rem;
         }
         .left{
-            width: 45%;
+            width: 50%;
             @include respond(tab-land){
                 width: 50%;
             }
@@ -101,7 +101,7 @@ main{
                 width: 100%;
             }
             .banner-title{
-                @include fontRender($fontTitle, 5.6rem, 700, 7.8rem);
+                @include fontRender($fontTitle, 8rem, 700, 7.8rem);
                 font-family: "silka-bold", Arial, sans-serif;
                 .highlight{
                     color: $brandBlueOne;
@@ -156,63 +156,25 @@ main{
     .message-section{
         padding: 8rem 10% 12rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        flex-direction: column;
         background: linear-gradient(209.76deg, #6851FF 18.19%, #4537A2 103.81%);
         .section-title{
             text-align: left;
-            font-size: 8rem;
+            font-size: 6.4rem;
             font-weight: 700;
             line-height: 1.4;
             color: $fontwhite;
-            width: 50%;
+            // width: 50%
         .breaknewline{
             @include respond(tab-port){
                 display: none;
             }
         }
     }
-    .form-box{
-        width: 50%;
-        form{
-            display: grid;
-                grid-template-columns: 60% 30%;
-                margin-top: 3rem;
-            .gstInp{
-                
-                input{
-                    height: 5rem;
-                    line-height: 1.4;
-                    color: $brandBlueTwo;
-                    font-weight: bold;
-                    font-size: 1.8rem;
-                    text-transform: uppercase;
-                    &::placeholder{
-                        opacity: 0.7;
-                        font-weight: 500;
-                        text-transform: capitalize;
-                    }
-                }
-            }
-            .cta{
-                height: 5rem;
-                background-color: transparent;
-                font-weight:600;
-                font-size: 1.8rem;
-                letter-spacing: 1px;
-                padding: 0.8rem 2rem;
-                border-radius: 3rem;
-                margin-left: 2rem;
-                border: 1px solid #fff;
-            }
-        }
-    }
-    }
     .section-1{
-        padding: 6rem 10%;
-        @include respond(tab-land){
-            padding: 6rem 5%;
-        }
+        padding-bottom: 3rem;
         .section-title{
                 text-align: center;
                 font-size: 5.6rem;
@@ -243,30 +205,71 @@ main{
                     font-size: 12rem;
                     text-align: center;
                     font-weight: 700;
-                    color: $brandBlueOne;
+                    color:#FFF;
                     line-height: 1.7;
                 }
-                &:last-child{
-                   .stat-number{
-                      position: relative;
-                      &::after{
-                          content: "Million";
-                          position: absolute;
-                          top: 25%;
-                          left: 140%;
-                          font-size: 2rem;
-                          font-weight: 400;
-                      }
-                   }
-                }
+                // &:last-child{
+                //    .stat-number{
+                //       position: relative;
+                //       &::after{
+                //           content: "Million";
+                //           position: absolute;
+                //           top: 25%;
+                //           left: 140%;
+                //           font-size: 2rem;
+                //           font-weight: 400;
+                //       }
+                //    }
+                // }
                 .stat-title{
                     text-align: center;
                     font-weight: 500;
-                    font-size: 1.5rem;
-                    color: $fontPrimary;
+                    font-size: 1.8rem;
+                    color: rgba(255, 255, 255, 0.7);
                 }
             }
         }
+    }
+    .form-box{
+        width: 60%;
+        form{
+            display: grid;
+                grid-template-columns: 60% 40%;
+                margin-top: 3rem;
+                // align-items: center;
+                justify-items: center;
+            .gstInp{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                input{
+                    height: 5rem;
+                    line-height: 1.4;
+                    color: $brandBlueTwo;
+                    font-weight: bold;
+                    font-size: 1.8rem;
+                    text-transform: uppercase;
+                    &::placeholder{
+                        opacity: 0.7;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .cta{
+                height: 5rem;
+                background-color: transparent;
+                font-weight:600;
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+                padding: 0.8rem 2rem;
+                border-radius: 3rem;
+                margin-left: 2rem;
+                border: 1px solid #fff;
+            }
+        }
+    }
     }
     .section-2{
         padding: 6rem 10%;
@@ -366,6 +369,12 @@ main{
                 grid-gap: 3rem 0;
             }
             .box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+                padding: 2rem 3rem;
+                border-radius: 10px;
                 .box-img{
                     width: 20rem;
                 }
@@ -378,6 +387,7 @@ main{
                 }
                 .content{
                     @include fontRender($font-60, 1.8rem, 500, 1.4);
+                    text-align: center;
                 }
             }
         }
