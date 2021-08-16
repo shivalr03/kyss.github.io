@@ -82,7 +82,7 @@ main{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12rem 10% 6rem;
+        padding: 12rem 10% 16rem;
         background-color: $background;
         position: relative;
         @include respond(tab-land){
