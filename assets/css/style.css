@@ -416,7 +416,7 @@ main .banner .left .banner-desc {
   padding-top: 2rem;
 }
 
-main .banner .left form {
+main .banner .left form .innerForm {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 60% 30%;
@@ -424,7 +424,7 @@ main .banner .left form {
   margin-top: 3rem;
 }
 
-main .banner .left form .gstInp input {
+main .banner .left form .innerForm .gstInp input {
   height: 5rem;
   line-height: 1.4;
   color: #4537A1;
@@ -433,31 +433,31 @@ main .banner .left form .gstInp input {
   text-transform: uppercase;
 }
 
-main .banner .left form .gstInp input::-webkit-input-placeholder {
+main .banner .left form .innerForm .gstInp input::-webkit-input-placeholder {
   opacity: 0.7;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .banner .left form .gstInp input:-ms-input-placeholder {
+main .banner .left form .innerForm .gstInp input:-ms-input-placeholder {
   opacity: 0.7;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .banner .left form .gstInp input::-ms-input-placeholder {
+main .banner .left form .innerForm .gstInp input::-ms-input-placeholder {
   opacity: 0.7;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .banner .left form .gstInp input::placeholder {
+main .banner .left form .innerForm .gstInp input::placeholder {
   opacity: 0.7;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .banner .left form .cta {
+main .banner .left form .innerForm .cta {
   height: 5rem;
   background-color: #6851FF;
   font-weight: bold;
@@ -465,6 +465,12 @@ main .banner .left form .cta {
   padding: 0.8rem 2rem;
   border-radius: 3rem;
   margin-left: 2rem;
+}
+
+main .banner .left form #existUser {
+  font-family: "silka-regular", sans-serif;
+  color: red;
+  font-size: 1.4rem;
 }
 
 main .banner .right {

@@ -112,7 +112,8 @@ main{
                 padding-top: 2rem;
             }
             form{
-                display: grid;
+                .innerForm{
+                    display: grid;
                     grid-template-columns: 60% 30%;
                     margin-top: 3rem;
                 .gstInp{
@@ -140,6 +141,12 @@ main{
                     border-radius: 3rem;
                     margin-left: 2rem;
                 }
+            }
+            #existUser{
+                font-family: $fontfamilyRegular;
+                color: red;
+                font-size: 1.4rem;
+            }
             }
         }
         .right{

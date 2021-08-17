@@ -1,0 +1,125 @@
+@import "root";
+
+body {
+  overflow-x: hidden !important;
+  color: #020a1c;
+}
+
+html {
+  scroll-behavior: smooth;
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+@mixin subhead {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: $fontTitle;
+}
+
+header{
+    background-color: $background;
+    .navbar{
+        padding: 2rem 10%;
+        @include respond(tab-land){
+            padding: 2rem 5%;
+        }
+        .navbar-brand{
+            max-width: 15rem;
+            img{
+                width: 100%;
+            }
+        }
+        .navbar-collapse{
+            justify-content: space-between;
+            font-size: 1.6rem;
+            .navbar-nav{
+                padding-left: 5rem;
+                .nav-item{
+                    padding: 0 0 0 2rem;
+                }
+            }
+        }
+    }
+}
+main{
+    background-color: $background;
+    .form-reg{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8rem 20%;
+      #form{
+        width: 80%;
+        .form-title{
+          margin-bottom: .5em;
+          color: $brandBlueOne;
+          font-weight: bold;
+          font-size: 5.6rem;
+          line-height: 1.4;
+          font-family: $fontfamilyBold;
+      }
+      .input-box{
+        margin-bottom: 3rem;
+        font-family: $fontfamilyRegular;
+          font-size: 1.8rem;
+          line-height: 1.4;
+          font-weight: 500;
+        .form-label{
+        }
+        .form-control{
+          height: 5rem;
+          font-size: 1.8rem;
+          &::placeholder{
+            color: rgba(0, 0, 0, 0.329);
+            font-family: $fontfamilyRegular;
+          // font-size: 1.8rem;
+          line-height: 1.4;
+          font-weight: 500;
+          }
+        }
+        .form-check-label{
+          font-size: 1.4rem;
+        }
+      }
+      .form-check{
+        margin-bottom:1rem;
+        cursor: pointer;
+      }
+      #registerBtn{
+        padding: 1rem 3rem;
+        background-color: $brandBlueOne;
+        font-family: $fontfamilyRegular;
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-top: 2rem;
+        &:disabled{
+          cursor:not-allowed;
+        }
+        &:hover{
+          background-color: $brandBlueTwo;
+        }
+      }
+        }
+      }
+    }
+.error{
+    border: 2px solid #ff623e;
+    &:focus{
+        border: 2px solid #ff623e;
+        box-shadow: none;
+    }
+}
