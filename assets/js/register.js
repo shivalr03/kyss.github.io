@@ -20,7 +20,7 @@ let registerPost = (e) => {
 let email = document.querySelector('#emailAddress').value;
 let name = document.querySelector('#userName').value;
 let phone_number = document.querySelector('#contact').value;
-let gender = "Mr/Mrs"
+let gender = "M"
 let isWhatsappOptIn = document.querySelector('#submitCheck:checked');
 let is_inactive = document.querySelector('#exampleCheck1:checked');
 let gstin = gstnNumber;
