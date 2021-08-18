@@ -194,13 +194,13 @@ main{
         }
         .main-box{
             display: grid;
-            grid-gap: 0 4rem;
+            gap: 0 4rem;
             grid-template-columns: repeat(3, 1fr);
             padding-top: 3rem;
             align-items: baseline;
             @include respond(phone){
                 grid-template-columns: 1fr;
-                grid-gap: 3rem 0;
+                gap: 3rem 0;
             }
             .stat{
                 display: flex;
@@ -319,11 +319,11 @@ main{
         .main-box{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 0 3rem;
+            gap: 0 3rem;
             padding-top: 5rem;
             @include respond(phone){
                 grid-template-columns: repeat(2, 1fr);
-                grid-gap: 0 3rem;
+                gap: 0 3rem;
             }
             .box{
                 .box-img{
@@ -370,10 +370,10 @@ main{
             padding-top: 5rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 0 6rem;
+            gap: 0 6rem;
             @include respond(phone){
                 grid-template-columns: 1fr;
-                grid-gap: 3rem 0;
+                gap: 3rem 0;
             }
             .box{
                 display: flex;
@@ -425,10 +425,10 @@ main{
             padding-top: 5rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 0 6rem;
+            gap: 0 6rem;
             @include respond(phone){
                 grid-template-columns: 1fr;
-                grid-gap: 3rem 0;
+                gap: 3rem 0;
             }
             .box{
                 .box-img{
@@ -471,6 +471,62 @@ main{
                 color: $fontPrimary;
             }
         }
+    }
+}
+footer{
+    background-color: $brandBlueTwo;
+    padding: 6rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .footer-top{
+        .main-box{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem 4rem;
+            color: #fff;
+            justify-content: space-between; 
+            .box{
+                .box-title{
+                    font-family: $fontfamilyBold;
+                    font-size: 2.4rem;
+                    line-height: 1.7;
+                    margin-bottom: 2rem;
+                }
+                .content{
+                    font-family: $fontfamilyRegular;
+                    font-size: 1.6rem;
+                    line-height: 1.4;
+                    margin-bottom: 2rem;
+                }
+                .links{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    margin-bottom: 2rem;
+                    a{
+                        color: #fff;
+                        font-family: $fontfamilyRegular;
+                        font-size: 1.6rem;
+                        line-height: 1.4;
+                        margin-bottom: 1rem;
+                        text-decoration: none;
+                            &:hover{
+                                text-decoration: none;
+                                color:$fontWhite-60;
+                            }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 1.4;
+        font-family: $fontfamilyRegular;
+        color: $fontWhite-60;
     }
 }
 .error{
