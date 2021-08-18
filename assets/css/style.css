@@ -1003,8 +1003,7 @@ main .section-7 .cta .cta-btn {
 }
 
 footer {
-  background-color: #4537A1;
-  padding: 6rem 10%;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1015,6 +1014,11 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+footer .footer-top {
+  background-color: #4537A1;
+  padding: 6rem 10% 4rem;
 }
 
 footer .footer-top .main-box {
@@ -1069,11 +1073,13 @@ footer .footer-top .main-box .box .links a:hover {
 }
 
 footer .footer-bottom {
+  padding: 2rem 10%;
   text-align: center;
   font-size: 1.8rem;
   line-height: 1.4;
   font-family: "silka-regular", sans-serif;
   color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(47, 32, 141, 0.95);
 }
 
 .error {
