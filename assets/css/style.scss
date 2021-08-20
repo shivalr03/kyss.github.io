@@ -486,7 +486,7 @@ main{
                         }
                     }
                 .box-img{
-                    width: 8rem;
+                    width: 20rem;
                     
                     
                 }
@@ -500,6 +500,7 @@ main{
                     border-radius: 6px;
                     transform: rotate(33.75deg);
                     background: linear-gradient(45deg, transparent, rgba(104, 81, 255, 0.2));
+                    display: none;
 
                 }
                 }

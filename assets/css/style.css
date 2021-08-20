@@ -1005,7 +1005,7 @@ main .section-6 .main-box .box .img-box:hover .bg-img {
 }
 
 main .section-6 .main-box .box .img-box .box-img {
-  width: 8rem;
+  width: 20rem;
 }
 
 main .section-6 .main-box .box .img-box .bg-img {
@@ -1019,6 +1019,7 @@ main .section-6 .main-box .box .img-box .bg-img {
   -webkit-transform: rotate(33.75deg);
           transform: rotate(33.75deg);
   background: linear-gradient(45deg, transparent, rgba(104, 81, 255, 0.2));
+  display: none;
 }
 
 main .section-6 .main-box .box .box-title {
