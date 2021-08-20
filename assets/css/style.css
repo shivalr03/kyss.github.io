@@ -18,6 +18,27 @@
 }
 
 /*Silka Fonts Ends*/
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body,
 html {
   font-family: "silka-regular", Arial, sans-serif;
@@ -974,8 +995,30 @@ main .section-6 .main-box {
   }
 }
 
-main .section-6 .main-box .box .box-img {
+main .section-6 .main-box .box .img-box {
+  position: relative;
+}
+
+main .section-6 .main-box .box .img-box:hover .bg-img {
+  -webkit-animation: spin 5s linear infinite !important;
+          animation: spin 5s linear infinite !important;
+}
+
+main .section-6 .main-box .box .img-box .box-img {
   width: 8rem;
+}
+
+main .section-6 .main-box .box .img-box .bg-img {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 6px;
+  -webkit-transform: rotate(33.75deg);
+          transform: rotate(33.75deg);
+  background: linear-gradient(45deg, transparent, rgba(104, 81, 255, 0.2));
 }
 
 main .section-6 .main-box .box .box-title {

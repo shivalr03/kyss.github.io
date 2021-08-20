@@ -478,9 +478,32 @@ main{
                 gap: 3rem 0;
             }
             .box{
+                .img-box{
+                    position: relative;
+                    &:hover{
+                        .bg-img{
+                            animation: spin 5s linear infinite !important;
+                        }
+                    }
                 .box-img{
                     width: 8rem;
+                    
+                    
                 }
+                .bg-img{
+                    content: "";
+                    position: absolute;
+                    bottom: 5px;
+                    left: 5px;
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 6px;
+                    transform: rotate(33.75deg);
+                    background: linear-gradient(45deg, transparent, rgba(104, 81, 255, 0.2));
+
+                }
+                }
+                
                 .box-title{
                     @include fontRender($fontTitle, 2.8rem, 700, 1.4);
                     padding: 2rem 0;

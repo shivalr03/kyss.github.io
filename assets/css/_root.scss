@@ -54,6 +54,13 @@ $blueGradient: linear-gradient(209.76deg, #6851FF 18.19%, #4537A2 103.81%);
 /*Silka Fonts Ends*/
 
 
+@keyframes spin { 
+  from { 
+      transform: rotate(0deg); 
+  } to { 
+      transform: rotate(360deg); 
+  }
+}
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
