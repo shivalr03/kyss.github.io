@@ -1057,7 +1057,7 @@ footer {
 }
 
 footer .footer-top {
-  background-color: #4537A1;
+  background-color: #252f38;
   padding: 6rem 10% 4rem;
 }
 
@@ -1119,7 +1119,7 @@ footer .footer-bottom {
   line-height: 1.4;
   font-family: "silka-regular", sans-serif;
   color: rgba(255, 255, 255, 0.6);
-  background-color: rgba(47, 32, 141, 0.95);
+  background-color: #1b2229;
 }
 
 .error {

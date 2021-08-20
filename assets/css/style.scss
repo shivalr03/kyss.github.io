@@ -527,7 +527,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     .footer-top{
-        background-color: $brandBlueTwo;
+        background-color: #252f38;
         padding: 6rem 10% 4rem;
         .main-box{
             display: grid;
@@ -577,7 +577,7 @@ footer{
         line-height: 1.4;
         font-family: $fontfamilyRegular;
         color: $fontWhite-60;
-        background-color: rgba(47, 32, 141, 0.95);
+        background-color: #1b2229;
     }
 }
 .error{
