@@ -1,0 +1,271 @@
+@import "root";
+
+body {
+  overflow-x: hidden !important;
+  color: #020a1c;
+}
+@keyframes twinkle-star {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes twinkle-star-small {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+@keyframes float {
+  from {
+    transform: translate(0rem, 2rem);
+  }
+  to {
+    transform: translate(1rem, 0);
+  }
+}
+.section-title {
+  font-family: "silka-bold", Arial, sans-serif;
+  margin-bottom: 1.6rem;
+  @include fontRender($fontTitle, 3.2rem, 700, 4rem);
+}
+@mixin para {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.67;
+  color: #424855;
+}
+html {
+  scroll-behavior: smooth;
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+@mixin subhead {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: $fontTitle;
+}
+
+header {
+  background-color: $background;
+  .navbar {
+    padding: 2rem 10%;
+    @include respond(tab-land) {
+      padding: 2rem 5%;
+    }
+    .navbar-brand {
+      max-width: 15rem;
+      img {
+        width: 100%;
+      }
+    }
+    .navbar-collapse {
+      justify-content: space-between;
+      font-size: 1.6rem;
+      .navbar-nav {
+        padding-left: 5rem;
+        .nav-item {
+          padding: 0 0 0 2rem;
+        }
+      }
+    }
+  }
+}
+main {
+  background-color: $background;
+  .title {
+    font-family: $fontfamilyBold;
+    color: $fontPrimary;
+    font-size: 5.4rem;
+    padding: 6rem 10% 3rem;
+  }
+  .line {
+    margin: 0 10%;
+  }
+  .features {
+    font-family: $fontfamilyRegular;
+    color: $fontPrimary;
+    font-size: 4.8rem;
+    padding: 3rem 10% 0;
+    font-weight: 600;
+  }
+  .main-box {
+    padding: 3rem 10% 6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 4rem;
+
+    .box {
+      .box-title {
+        font-family: $fontfamilyRegular;
+        color: $fontPrimary;
+        font-size: 2.4rem;
+        padding: 0 0 2rem;
+        font-weight: 600;
+        line-height: 1.7;
+      }
+      .box-content {
+        font-family: $fontfamilyRegular;
+        color: rgb(51, 50, 50);
+        font-size: 1.6rem;
+        padding: 1rem 0;
+      }
+      .box-link {
+        color: #10ac84;
+        font-family: $fontfamilyRegular;
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        text-decoration: none;
+        transition: all 0.3s linear;
+        &:hover {
+          color: #098062;
+        }
+      }
+    }
+  }
+  .main-box-2 {
+    padding: 6rem 10%;
+  }
+  .subscribe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 4rem;
+    margin: 3rem 10%;
+    background-color: $brandGreen;
+    align-items: center;
+    padding: 3rem 2rem;
+    border-radius: 0.4rem;
+    .box-1 {
+      .section-title {
+        font-family: $fontfamilyBold;
+        color: #fff;
+        font-size: 4.2rem;
+        line-height: 1.7;
+      }
+      .message {
+        font-family: $fontfamilyRegular;
+        font-weight: 1.4;
+        font-size: 2.4rem;
+        color: #fff;
+      }
+    }
+    .box-2 {
+      .content {
+        font-family: $fontfamilyRegular;
+        font-weight: 1.4;
+        font-size: 1.6rem;
+        color: #fff;
+      }
+    }
+    .box-3 {
+      form {
+        .form-box {
+          .form-control {
+            height: 4rem;
+            border: 0;
+            box-shadow: none;
+            border-radius: 0.4rem;
+            font-size: 1.6rem;
+            font-family: $fontfamilyRegular;
+            &::placeholder {
+              color: rgb(187, 184, 184);
+            }
+          }
+        }
+        .cta {
+          border-radius: 0.4rem;
+          font-size: 1.6rem;
+          font-family: $fontfamilyRegular;
+          padding: 1rem 3rem;
+          background-color: #000;
+          border: 0;
+          box-shadow: none;
+          margin-top: 1rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+footer {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .footer-top {
+    background-color: #252f38;
+    padding: 6rem 10% 4rem;
+    .main-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem 4rem;
+      color: #fff;
+      justify-content: space-between;
+      .box {
+        .box-title {
+          font-family: $fontfamilyBold;
+          font-size: 2.4rem;
+          line-height: 1.7;
+          margin-bottom: 2rem;
+        }
+        .content {
+          font-family: $fontfamilyRegular;
+          font-size: 1.6rem;
+          line-height: 1.4;
+          margin-bottom: 2rem;
+        }
+        .links {
+          display: flex;
+          flex-direction: column;
+
+          margin-bottom: 2rem;
+          a {
+            color: #fff;
+            font-family: $fontfamilyRegular;
+            font-size: 1.6rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+              color: $fontWhite-60;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    padding: 2rem 10%;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-family: $fontfamilyRegular;
+    color: $fontWhite-60;
+    background-color: #1b2229;
+  }
+}
+.error {
+  border: 2px solid #ff623e;
+  &:focus {
+    border: 2px solid #ff623e;
+    box-shadow: none;
+  }
+}
