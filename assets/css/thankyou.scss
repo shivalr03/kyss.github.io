@@ -1,0 +1,212 @@
+@import "root";
+
+body {
+  overflow-x: hidden !important;
+  color: #020a1c;
+}
+@keyframes twinkle-star {
+    from {transform: scale(1); }
+    to {transform: scale(1.5); }
+  }
+  @keyframes twinkle-star-small {
+    from {transform: scale(1); }
+    to {transform: scale(0.8); }
+  }
+  @keyframes float {
+    from {transform: translate(0rem, 2rem);}
+    to {    transform: translate(1rem, 0); }
+  }
+.section-title {
+    font-family: "silka-bold", Arial, sans-serif;
+    margin-bottom: 1.6rem;
+    @include fontRender($fontTitle, 3.2rem, 700, 4rem);
+  }
+@mixin para {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.67;
+  color: #424855;
+}
+html {
+  scroll-behavior: smooth;
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+@mixin subhead {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: $fontTitle;
+}
+
+header{
+    background-color: $background;
+    .navbar{
+        padding: 2rem 10%;
+        @include respond(tab-land){
+            padding: 2rem 5%;
+        }
+        .navbar-brand{
+            max-width: 15rem;
+            img{
+                width: 100%;
+            }
+        }
+        .navbar-collapse{
+            justify-content: space-between;
+            font-size: 1.6rem;
+            .navbar-nav{
+                padding-left: 5rem;
+                .nav-item{
+                    padding: 0 0 0 2rem;
+                }
+            }
+        }
+    }
+}
+main{
+    background-color: $background;
+    .banner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12rem 10% 16rem;
+        background-color: $background;
+        position: relative;
+        @include respond(tab-land){
+            padding: 12rem 5% 6rem;
+        }
+        @include respond(phone){
+            flex-direction: column;
+            padding-top: 6rem;
+        }
+        .left{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .banner-title{
+                @include fontRender($fontTitle, 8rem, 700, 7.8rem);
+                font-family: "silka-bold", Arial, sans-serif;
+                text-align: center;
+                .highlight{
+                    color: $brandBlueOne;
+                }
+            }
+            .fan{
+                width: 50%;
+            }
+            .banner-desc{
+                @include fontRender($fontPrimary, 1.8rem, 500, 1.4);
+                padding-top: 2rem;
+            }
+            .cta{
+                margin-top: 5rem;
+                .link{
+                    text-decoration: none;
+                    padding: 1rem 3rem 1rem 5rem;
+                    border-radius: 3rem;
+                    @include fontRender($fontPrimary, 1.6rem, 500, 1.4);
+                    background-color: $brandBlueTwo;
+                    color: #fff;
+                    position: relative;
+                    transition: all .3s linear;
+                    &:hover,&:active{
+                        text-decoration: none;
+                        background-color: #342787;
+                        &::before{
+                            left: 8%;
+                        }
+                    }
+                    &::before{
+                        content: url(../img/left-arrow.png);
+                        position: absolute;
+                        top: 19%;
+                        left: 10%;
+                        transition: all .3s linear;
+
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .footer-top{
+        background-color: #252f38;
+        padding: 6rem 10% 4rem;
+        .main-box{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem 4rem;
+            color: #fff;
+            justify-content: space-between; 
+            .box{
+                .box-title{
+                    font-family: $fontfamilyBold;
+                    font-size: 2.4rem;
+                    line-height: 1.7;
+                    margin-bottom: 2rem;
+                }
+                .content{
+                    font-family: $fontfamilyRegular;
+                    font-size: 1.6rem;
+                    line-height: 1.4;
+                    margin-bottom: 2rem;
+                }
+                .links{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    margin-bottom: 2rem;
+                    a{
+                        color: #fff;
+                        font-family: $fontfamilyRegular;
+                        font-size: 1.6rem;
+                        line-height: 1.4;
+                        margin-bottom: 1rem;
+                        text-decoration: none;
+                            &:hover{
+                                text-decoration: none;
+                                color:$fontWhite-60;
+                            }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        padding: 2rem 10%;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 1.4;
+        font-family: $fontfamilyRegular;
+        color: $fontWhite-60;
+        background-color: #1b2229;
+    }
+}
+.error{
+    border: 2px solid #ff623e;
+    &:focus{
+        border: 2px solid #ff623e;
+        box-shadow: none;
+    }
+}
