@@ -82,7 +82,7 @@ main{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12rem 10% 16rem;
+        padding: 6rem 10% 16rem;
         background-color: $background;
         position: relative;
         @include respond(tab-land){
@@ -93,7 +93,7 @@ main{
             padding-top: 6rem;
         }
         .left{
-            width: 50%;
+            width: 54%;
             @include respond(tab-land){
                 width: 50%;
             }
@@ -101,21 +101,35 @@ main{
                 width: 100%;
             }
             .banner-title{
-                @include fontRender($fontTitle, 8rem, 700, 7.8rem);
+                @include fontRender(#000, 5.4rem, 700, 1.4);
+                
                 font-family: "silka-bold", Arial, sans-serif;
                 .highlight{
-                    color: $brandBlueOne;
+                    // color: $brandBlueOne;
+                    background: -webkit-linear-gradient(#6851FF, #A700F1);
+    background-clip: border-box;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+                }
+                .second-line{
+                    color: rgb(80, 78, 78);
+                    padding: 1rem;
+                    text-decoration: underline;
                 }
             }
             .banner-desc{
-                @include fontRender($fontPrimary, 1.8rem, 500, 1.4);
-                padding-top: 2rem;
+                @include fontRender($fontfamilypop, 2rem, 500, 1.4);
+                padding: 3rem 0 3rem;
             }
             form{
                 .innerForm{
                     display: grid;
-                    grid-template-columns: 60% 30%;
+                    grid-template-columns: 60% 40%;
                     margin-top: 3rem;
+                    background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
+                    border: 1px soild #4d00aa;
+                    border-radius: 1rem;
+                    justify-content: space-between;
                 .gstInp{
                     
                     input{
@@ -125,6 +139,8 @@ main{
                         font-weight: bold;
                         font-size: 1.8rem;
                         text-transform: uppercase;
+                        // border: 1px solid $brandBlueTwo;
+                        margin: 0 !important;
                         &::placeholder{
                             opacity: 0.7;
                             font-weight: 500;
@@ -134,12 +150,15 @@ main{
                 }
                 .cta{
                     height: 5rem;
-                    background-color: $brandBlueOne;
+                    // background-color: $brandBlueOne;
+                    // background-image: linear-gradient(to right bottom,#4300a3,#4d00aa,#5700b1,#6000b7,#6a00be,#7200c5,#7b00cb,#8300d2,#8c00da,#9500e2,#9e00e9,#a700f1);
                     font-weight:bold;
                     font-size: 1.6rem;
                     padding: 0.8rem 2rem;
-                    border-radius: 3rem;
-                    margin-left: 2rem;
+                    border-radius: 1rem;
+                    margin-left: 0rem;
+                    background-color: transparent;
+                    border: 0;
                 }
             }
             #existUser{
@@ -166,13 +185,16 @@ main{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background: linear-gradient(209.76deg, #6851FF 18.19%, #4537A2 103.81%);
+        background-color: #fff;
+        position: relative;
+        // background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
         .section-title{
             text-align: left;
             font-size: 6.4rem;
             font-weight: 700;
             line-height: 1.4;
             color: $fontwhite;
+            color: #000;
             // width: 50%
         .breaknewline{
             @include respond(tab-port){
@@ -209,11 +231,18 @@ main{
                 justify-content: space-between;
                 
                 .stat-number{
-                    font-size: 12rem;
+                    font-size: 10rem;
                     text-align: center;
                     font-weight: 700;
                     color:#FFF;
                     line-height: 1;
+                    font-family: $fontfamilypop;
+                    padding-bottom: 3rem ;
+                    background: -webkit-linear-gradient(#6851FF, #A700F1);
+    background-clip: border-box;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+                    
                 }
                 &:last-child{
                    .stat-number{
@@ -221,21 +250,29 @@ main{
                       &::after{
                           content: "m";
                           position: absolute;
-                          bottom: 3%;
+                          bottom: 25%;
                           left: 100%;
                           font-size: 8rem;
                           font-weight: 400;
+                          background: -webkit-linear-gradient(#6851FF, #A700F1);
+    background-clip: border-box;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
                       }
                    }
                 }
                 .stat-title{
                     text-align: center;
                     font-weight: 500;
-                    font-size: 1.8rem;
-                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 1.6rem;
+                    // color: rgba(255, 255, 255, 0.7);
+                    color: #000;
+                    font-family: $fontfamilypop;
+                    width: 75%;
                 }
             }
         }
+        
     }
     .form-box{
         width: 60%;
@@ -257,6 +294,7 @@ main{
                     font-weight: bold;
                     font-size: 1.8rem;
                     text-transform: uppercase;
+                    border-radius: 1rem;
                     &::placeholder{
                         opacity: 0.7;
                         font-weight: 500;
@@ -271,11 +309,39 @@ main{
                 font-size: 1.8rem;
                 letter-spacing: 1px;
                 padding: 0.8rem 2rem;
-                border-radius: 3rem;
+                border-radius: 1rem;
                 margin-left: 2rem;
-                border: 1px solid #fff;
+                // border: 1px solid #fff;
+                background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
+                color: #fff;
+
+                
             }
         }
+    }
+    &::before{
+        content: " ";
+        position: absolute;
+        top: -5%;
+        left: 5%;
+        width: 25rem;
+        height:25rem;
+background: linear-gradient(180deg, rgba(104, 81, 255, 0.4) 0%, rgba(169, 0, 241, 0.2) 100%);
+box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
+border-radius: 100%;
+
+    }
+    &::after{
+        content: " ";
+        position: absolute;
+        top: 8%;
+        left: 3%;
+        width: 15rem;
+        height:15rem;
+background: linear-gradient(180deg, rgba(104, 81, 255, 0.557) 0%, rgba(169, 0, 241, 0.555) 100%);
+box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
+border-radius: 100%;
+
     }
     }
     .section-2{
@@ -345,9 +411,11 @@ main{
         }
     }
     .section-5{
+        position: relative;
         display: flex;
         flex-direction: column;
         padding: 6rem 10% 15rem;
+        overflow: hidden;
         @include respond(tab-land){
             padding: 6rem 5%;
         }
@@ -359,7 +427,10 @@ main{
                 width: 100%;
             }
             .highlight{
-                color: $brandBlueOne;
+                background: -webkit-linear-gradient(#6851FF, #A700F1);
+                background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             }
         }
         .sec-desc{
@@ -412,11 +483,15 @@ main{
                                     @include fontRender($fontTitle, 4.2rem, 700, 1.4);
                                     padding: 2rem 0;
                                     .highlight{
-                                        color: rgba(104, 81, 255, 0.4);
+                                        background: -webkit-linear-gradient(#6851FF, #A700F1);
+                                        background-clip: border-box;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
                                     }
                                 }
                                 .content{
-                                    @include fontRender($font-60, 1.8rem, 500, 1.4);
+                                    @include fontRender($font-60, 1.8rem, 400, 1.4);
+                                    font-family: $fontfamilypop;
                                 }
                 }
                 .right{
@@ -436,14 +511,42 @@ main{
                         @include fontRender($fontTitle, 4.2rem, 700, 1.4);
                         padding: 2rem 0;
                         .highlight{
-                            color: rgba(104, 81, 255, 0.4);
+                            background: -webkit-linear-gradient(#6851FF, #A700F1);
+                            background-clip: border-box;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
                         }
                     }
                     .content{
-                        @include fontRender($font-60, 1.8rem, 500, 1.4);
+                        @include fontRender($font-60, 1.8rem, 400, 1.4);
+                        font-family: $fontfamilypop;
                     }
                 }
             }
+        }
+        &::before{
+            content: " ";
+            position: absolute;
+            top: -5%;
+            left: 5%;
+            width: 25rem;
+            height:25rem;
+background: linear-gradient(180deg, rgba(104, 81, 255, 0.4) 0%, rgba(169, 0, 241, 0.2) 100%);
+box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
+border-radius: 100%;
+
+        }
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 8%;
+            left: 3%;
+            width: 15rem;
+            height:15rem;
+background: linear-gradient(180deg, rgba(104, 81, 255, 0.557) 0%, rgba(169, 0, 241, 0.555) 100%);
+box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
+border-radius: 100%;
+
         }
     }
     .section-6{
@@ -461,7 +564,10 @@ main{
                 width: 100%;
             }
             .highlight{
-                color: $brandBlueOne;
+                background: -webkit-linear-gradient(#6851FF, #A700F1);
+                background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             }
         }
         .sec-desc{
@@ -487,7 +593,11 @@ main{
                     }
                 .box-img{
                     width: 20rem;
-                    
+                    width: 10rem;
+height: auto;
+padding: 2rem;
+border-radius: 100%;
+background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
                     
                 }
                 .bg-img{
@@ -508,12 +618,19 @@ main{
                 .box-title{
                     @include fontRender($fontTitle, 2.8rem, 700, 1.4);
                     padding: 2rem 0;
-                    .highlight{
-                        color: rgba(104, 81, 255, 0.4);
-                    }
+                    font-family: $fontfamilyBold;
+                    // .highlight{
+                    //     background: -webkit-linear-gradient(#6851FF, #A700F1);
+                        
+                    //     background-clip: border-box;
+                    // -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
+                    // }
+                    
                 }
                 .content{
-                    @include fontRender($font-60, 1.8rem, 500, 1.4);
+                    @include fontRender($font-60, 1.8rem, 400, 1.4);
+                    font-family: $fontfamilypop;
                 }
             }
         }
@@ -524,7 +641,8 @@ main{
         align-items: center;
         padding: 12rem 10%;
         flex-direction: column;
-        background: $blueGradient;
+        // background: $blueGradient;
+        background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
         text-align: center;
         @include respond(phone){
             padding: 12rem 5%;
@@ -535,6 +653,7 @@ main{
         .sec-desc{
             @include fontRender($fontWhite-60, 1.8rem, 500, 1.4);
             margin-bottom: 7rem;
+            font-family: $fontfamilypop;
         }
         .cta{
             .cta-btn{
@@ -572,24 +691,38 @@ footer{
                     line-height: 1.4;
                     margin-bottom: 2rem;
                 }
+                // .links{
+                //     display: flex;
+                //     flex-direction: column;
+                    
+                //     margin-bottom: 2rem;
+                //     a{
+                //         color: #fff;
+                //         font-family: $fontfamilyRegular;
+                //         font-size: 1.6rem;
+                //         line-height: 1.4;
+                //         margin-bottom: 1rem;
+                //         text-decoration: none;
+                //             &:hover{
+                //                 text-decoration: none;
+                //                 color:$fontWhite-60;
+                //             }
+                //     }
+                    
+                // }
                 .links{
                     display: flex;
-                    flex-direction: column;
-                    
-                    margin-bottom: 2rem;
+                    justify-content: left;
                     a{
-                        color: #fff;
-                        font-family: $fontfamilyRegular;
-                        font-size: 1.6rem;
-                        line-height: 1.4;
-                        margin-bottom: 1rem;
-                        text-decoration: none;
-                            &:hover{
-                                text-decoration: none;
-                                color:$fontWhite-60;
-                            }
+                        margin-right: 2rem;
+                        transition: all .3s linear;
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                        img{
+                            width: 5rem;
+                        }
                     }
-                    
                 }
             }
         }
