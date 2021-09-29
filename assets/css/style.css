@@ -371,18 +371,13 @@ main {
 }
 
 main .banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 6rem 10% 16rem;
   background-color: #fff;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 77%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 77%, 0% 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 81, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
+  background-image: linear-gradient(180deg, rgba(104, 81, 255, 0.3), rgba(255, 255, 255, 0.3));
 }
 
 @media only screen and (max-width: 75em) {
@@ -525,6 +520,114 @@ main .banner .right {
 
 main .banner .right .banner-img {
   max-width: 100%;
+}
+
+main .banner .main-swiper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .banner .main-swiper .swiper {
+  width: 45%;
+}
+
+main .banner .main-swiper .swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0;
+}
+
+main .banner-section {
+  padding: 6rem 10% 16rem;
+  background-color: #fff;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 77%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 77%, 0% 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 81, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
+  background-image: linear-gradient(180deg, rgba(104, 81, 255, 0.3), rgba(255, 255, 255, 0.3));
+}
+
+@media only screen and (max-width: 75em) {
+  main .banner-section {
+    padding: 12rem 5% 6rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  main .banner-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 6rem;
+  }
+}
+
+main .banner-section .slider-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .banner-section .slider-container .left {
+  width: 45%;
+}
+
+main .banner-section .slider-container .left .main-swiper .swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}
+
+main .banner-section .slider-container .left .main-swiper .swiper .swiper-slide .banner-title {
+  color: #000;
+  font-size: 5.4rem;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: "silka-bold", Arial, sans-serif;
+}
+
+main .banner-section .slider-container .left .main-swiper .swiper .swiper-slide .banner-title .highlight {
+  background: -webkit-linear-gradient(#6851FF, #A700F1);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .banner-section .slider-container .left .main-swiper .swiper .swiper-slide .banner-title .second-line {
+  color: #504e4e;
+  padding: 1rem;
+  text-decoration: underline;
+}
+
+main .banner-section .slider-container .left .main-swiper .swiper .swiper-slide .banner-desc {
+  color: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 3rem 0 3rem;
+}
+
+main .banner-section .slider-container .right {
+  width: 45%;
+}
+
+main .banner-section .slider-container .right .main-swiper .swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}
+
+main .banner-section .slider-container .swiper-pagination {
+  bottom: 20%;
 }
 
 main .message-section {

@@ -79,12 +79,14 @@ header{
 main{
     background-color: $background;
     .banner{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        
         padding: 6rem 10% 16rem;
         background-color: $background;
         position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 77%, 0% 100%);
+     background-image: linear-gradient(
+180deg,rgba(104, 81, 255, 0.3),rgba(255, 255, 255, 0.3)); 
+
         @include respond(tab-land){
             padding: 12rem 5% 6rem;
         }
@@ -176,6 +178,85 @@ main{
             }
             .banner-img{
                 max-width: 100%;
+            }
+        }
+        .main-swiper{
+            display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .swiper{
+            width: 45%;
+            .swiper-slide:not(.swiper-slide-active){
+                opacity: 0;
+            }
+        }
+        }
+    }
+    .banner-section{
+        padding: 6rem 10% 16rem;
+        background-color: $background;
+        position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 77%, 0% 100%);
+     background-image: linear-gradient(
+180deg,rgba(104, 81, 255, 0.3),rgba(255, 255, 255, 0.3)); 
+
+        @include respond(tab-land){
+            padding: 12rem 5% 6rem;
+        }
+        @include respond(phone){
+            flex-direction: column;
+            padding-top: 6rem;
+        }
+        .slider-container{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .left{
+                width: 45%;
+                .main-swiper{
+                    .swiper{
+                        .swiper-slide:not(.swiper-slide-active){
+                            opacity: 0 !important;
+                        }
+                        .swiper-slide{
+                            .banner-title{
+                                @include fontRender(#000, 5.4rem, 700, 1.4);
+                                
+                                font-family: "silka-bold", Arial, sans-serif;
+                                .highlight{
+                                    // color: $brandBlueOne;
+                                    background: -webkit-linear-gradient(#6851FF, #A700F1);
+                    background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                                }
+                                .second-line{
+                                    color: rgb(80, 78, 78);
+                                    padding: 1rem;
+                                    text-decoration: underline;
+                                }
+                            }
+                            .banner-desc{
+                                @include fontRender($fontfamilypop, 2rem, 500, 1.4);
+                                padding: 3rem 0 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 45%;
+                .main-swiper{
+                    .swiper{
+                        .swiper-slide:not(.swiper-slide-active){
+                            opacity: 0 !important;
+                        }
+                    }
+                }
+            }
+            .swiper-pagination{
+                bottom: 20%;
             }
         }
     }
