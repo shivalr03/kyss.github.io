@@ -239,10 +239,56 @@ main{
                             }
                             .banner-desc{
                                 @include fontRender($fontfamilypop, 2rem, 500, 1.4);
-                                padding: 3rem 0 3rem;
+                                padding: 3rem 0 1rem;
                             }
                         }
                     }
+                }
+                form{
+                    .innerForm{
+                        display: grid;
+                        grid-template-columns: 60% 40%;
+                        margin-top: 3rem;
+                        background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
+                        border: 1px soild #4d00aa;
+                        border-radius: 1rem;
+                        justify-content: space-between;
+                    .gstInp{
+                        
+                        input{
+                            height: 5rem;
+                            line-height: 1.4;
+                            color: $brandBlueTwo;
+                            font-weight: bold;
+                            font-size: 1.8rem;
+                            text-transform: uppercase;
+                            // border: 1px solid $brandBlueTwo;
+                            margin: 0 !important;
+                            &::placeholder{
+                                opacity: 0.7;
+                                font-weight: 500;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                    .cta{
+                        height: 5rem;
+                        // background-color: $brandBlueOne;
+                        // background-image: linear-gradient(to right bottom,#4300a3,#4d00aa,#5700b1,#6000b7,#6a00be,#7200c5,#7b00cb,#8300d2,#8c00da,#9500e2,#9e00e9,#a700f1);
+                        font-weight:bold;
+                        font-size: 1.6rem;
+                        padding: 0.8rem 2rem;
+                        border-radius: 1rem;
+                        margin-left: 0rem;
+                        background-color: transparent;
+                        border: 0;
+                    }
+                }
+                #existUser{
+                    font-family: $fontfamilyRegular;
+                    color: red;
+                    font-size: 1.4rem;
+                }
                 }
             }
             .right{
@@ -257,6 +303,14 @@ main{
             }
             .swiper-pagination{
                 bottom: 20%;
+                .swiper-pagination-bullet {
+                    height: 1.4rem;
+                        width: 1.4rem;
+                }
+                .swiper-pagination-bullet-active{
+                    background-color: $brandBlueOne;
+                        background: linear-gradient(to right bottom,#4300a3,#4d00aa,#5700b1,#6000b7,#6a00be,#7200c5,#7b00cb,#8300d2,#8c00da,#9500e2,#9e00e9,#a700f1);
+                }
             }
         }
     }
