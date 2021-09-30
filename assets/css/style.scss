@@ -315,7 +315,7 @@ main{
         }
     }
     .message-section{
-        padding: 8rem 10% 12rem;
+        padding: 6rem 10%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -325,7 +325,7 @@ main{
         // background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
         .section-title{
             text-align: left;
-            font-size: 6.4rem;
+            font-size: 5.6rem;
             font-weight: 700;
             line-height: 1.4;
             color: $fontwhite;
@@ -338,7 +338,7 @@ main{
         }
     }
     .section-1{
-        padding-bottom: 3rem;
+        padding: 3rem 0 3rem;
         .section-title{
                 text-align: center;
                 font-size: 5.6rem;
@@ -362,12 +362,11 @@ main{
             .stat{
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: left;
                 justify-content: space-between;
                 
                 .stat-number{
                     font-size: 10rem;
-                    text-align: center;
                     font-weight: 700;
                     color:#FFF;
                     line-height: 1;
@@ -382,11 +381,13 @@ main{
                 &:last-child{
                    .stat-number{
                       position: relative;
+                    //   margin-left: -12rem;
                       &::after{
-                          content: "m";
+                          content: "million";
                           position: absolute;
                           bottom: 25%;
-                          left: 100%;
+                          left: 0;
+                          padding-left: 7rem;
                           font-size: 8rem;
                           font-weight: 400;
                           background: -webkit-linear-gradient(#6851FF, #A700F1);
@@ -412,16 +413,16 @@ main{
     .form-box{
         width: 60%;
         form{
-            display: grid;
+            .innerForm{
+                display: grid;
                 grid-template-columns: 60% 40%;
                 margin-top: 3rem;
-                // align-items: center;
-                justify-items: center;
+                background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
+                border: 1px soild #4d00aa;
+                border-radius: 1rem;
+                justify-content: space-between;
             .gstInp{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                width: 100%;
+                
                 input{
                     height: 5rem;
                     line-height: 1.4;
@@ -429,7 +430,8 @@ main{
                     font-weight: bold;
                     font-size: 1.8rem;
                     text-transform: uppercase;
-                    border-radius: 1rem;
+                    // border: 1px solid $brandBlueTwo;
+                    margin: 0 !important;
                     &::placeholder{
                         opacity: 0.7;
                         font-weight: 500;
@@ -439,45 +441,93 @@ main{
             }
             .cta{
                 height: 5rem;
-                background-color: transparent;
-                font-weight:600;
-                font-size: 1.8rem;
-                letter-spacing: 1px;
+                // background-color: $brandBlueOne;
+                // background-image: linear-gradient(to right bottom,#4300a3,#4d00aa,#5700b1,#6000b7,#6a00be,#7200c5,#7b00cb,#8300d2,#8c00da,#9500e2,#9e00e9,#a700f1);
+                font-weight:bold;
+                font-size: 1.6rem;
                 padding: 0.8rem 2rem;
                 border-radius: 1rem;
-                margin-left: 2rem;
-                // border: 1px solid #fff;
-                background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
-                color: #fff;
-
-                
+                margin-left: 0rem;
+                background-color: transparent;
+                border: 0;
             }
         }
+        #existUser{
+            font-family: $fontfamilyRegular;
+            color: red;
+            font-size: 1.4rem;
+        }
+        }
     }
-    &::before{
-        content: " ";
-        position: absolute;
-        top: -5%;
-        left: 5%;
-        width: 25rem;
-        height:25rem;
-background: linear-gradient(180deg, rgba(104, 81, 255, 0.4) 0%, rgba(169, 0, 241, 0.2) 100%);
-box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
-border-radius: 100%;
+    // .form-box{
+    //     width: 60%;
+    //     form{
+    //         display: grid;
+    //             grid-template-columns: 60% 40%;
+    //             margin-top: 3rem;
+    //             // align-items: center;
+    //             justify-items: center;
+    //         .gstInp{
+    //             display: flex;
+    //             justify-content: space-around;
+    //             align-items: center;
+    //             width: 100%;
+    //             input{
+    //                 height: 5rem;
+    //                 line-height: 1.4;
+    //                 color: $brandBlueTwo;
+    //                 font-weight: bold;
+    //                 font-size: 1.8rem;
+    //                 text-transform: uppercase;
+    //                 border-radius: 1rem;
+    //                 &::placeholder{
+    //                     opacity: 0.7;
+    //                     font-weight: 500;
+    //                     text-transform: capitalize;
+    //                 }
+    //             }
+    //         }
+    //         .cta{
+    //             height: 5rem;
+    //             background-color: transparent;
+    //             font-weight:600;
+    //             font-size: 1.8rem;
+    //             letter-spacing: 1px;
+    //             padding: 0.8rem 2rem;
+    //             border-radius: 1rem;
+    //             margin-left: 2rem;
+    //             // border: 1px solid #fff;
+    //             background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
+    //             color: #fff;
 
-    }
-    &::after{
-        content: " ";
-        position: absolute;
-        top: 8%;
-        left: 3%;
-        width: 15rem;
-        height:15rem;
-background: linear-gradient(180deg, rgba(104, 81, 255, 0.557) 0%, rgba(169, 0, 241, 0.555) 100%);
-box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
-border-radius: 100%;
+                
+    //         }
+    //     }
+    // }
+//     &::before{
+//         content: " ";
+//         position: absolute;
+//         top: -5%;
+//         left: 5%;
+//         width: 25rem;
+//         height:25rem;
+// background: linear-gradient(180deg, rgba(104, 81, 255, 0.4) 0%, rgba(169, 0, 241, 0.2) 100%);
+// box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
+// border-radius: 100%;
 
-    }
+//     }
+//     &::after{
+//         content: " ";
+//         position: absolute;
+//         top: 8%;
+//         left: 3%;
+//         width: 15rem;
+//         height:15rem;
+// background: linear-gradient(180deg, rgba(104, 81, 255, 0.557) 0%, rgba(169, 0, 241, 0.555) 100%);
+// box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
+// border-radius: 100%;
+
+//     }
     }
     .section-2{
         padding: 6rem 10%;
@@ -719,6 +769,10 @@ border-radius: 100%;
                 gap: 3rem 0;
             }
             .box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
                 .img-box{
                     position: relative;
                     &:hover{
@@ -783,7 +837,7 @@ background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6
             padding: 12rem 5%;
         }
         .section-title{
-            @include fontRender($fontwhite, 4.8rem, 700, 6.7rem);
+            @include fontRender($fontwhite, 5.6rem, 700, 6.7rem);
         }
         .sec-desc{
             @include fontRender($fontWhite-60, 1.8rem, 500, 1.4);

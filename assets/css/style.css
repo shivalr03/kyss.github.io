@@ -708,7 +708,7 @@ main .banner-section .slider-container .swiper-pagination .swiper-pagination-bul
 }
 
 main .message-section {
-  padding: 8rem 10% 12rem;
+  padding: 6rem 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -728,7 +728,7 @@ main .message-section {
 
 main .message-section .section-title {
   text-align: left;
-  font-size: 6.4rem;
+  font-size: 5.6rem;
   font-weight: 700;
   line-height: 1.4;
   color: #fff;
@@ -742,7 +742,7 @@ main .message-section .section-title {
 }
 
 main .message-section .section-1 {
-  padding-bottom: 3rem;
+  padding: 3rem 0 3rem;
 }
 
 main .message-section .section-1 .section-title {
@@ -785,9 +785,9 @@ main .message-section .section-1 .main-box .stat {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -795,7 +795,6 @@ main .message-section .section-1 .main-box .stat {
 
 main .message-section .section-1 .main-box .stat .stat-number {
   font-size: 10rem;
-  text-align: center;
   font-weight: 700;
   color: #FFF;
   line-height: 1;
@@ -812,10 +811,11 @@ main .message-section .section-1 .main-box .stat:last-child .stat-number {
 }
 
 main .message-section .section-1 .main-box .stat:last-child .stat-number::after {
-  content: "m";
+  content: "million";
   position: absolute;
   bottom: 25%;
-  left: 100%;
+  left: 0;
+  padding-left: 7rem;
   font-size: 8rem;
   font-weight: 400;
   background: -webkit-linear-gradient(#6851FF, #A700F1);
@@ -837,101 +837,70 @@ main .message-section .form-box {
   width: 60%;
 }
 
-main .message-section .form-box form {
+main .message-section .form-box form .innerForm {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 60% 40%;
       grid-template-columns: 60% 40%;
   margin-top: 3rem;
-  justify-items: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#4300a3), color-stop(#4d00aa), color-stop(#5700b1), color-stop(#6000b7), color-stop(#6a00be), color-stop(#7200c5), color-stop(#7b00cb), color-stop(#8300d2), color-stop(#8c00da), color-stop(#9500e2), color-stop(#9e00e9), to(#a700f1));
+  background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
+  border: 1px soild #4d00aa;
+  border-radius: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-main .message-section .form-box form .gstInp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-}
-
-main .message-section .form-box form .gstInp input {
+main .message-section .form-box form .innerForm .gstInp input {
   height: 5rem;
   line-height: 1.4;
   color: #4537A1;
   font-weight: bold;
   font-size: 1.8rem;
   text-transform: uppercase;
-  border-radius: 1rem;
+  margin: 0 !important;
 }
 
-main .message-section .form-box form .gstInp input::-webkit-input-placeholder {
+main .message-section .form-box form .innerForm .gstInp input::-webkit-input-placeholder {
   opacity: 0.7;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .message-section .form-box form .gstInp input:-ms-input-placeholder {
+main .message-section .form-box form .innerForm .gstInp input:-ms-input-placeholder {
   opacity: 0.7;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .message-section .form-box form .gstInp input::-ms-input-placeholder {
+main .message-section .form-box form .innerForm .gstInp input::-ms-input-placeholder {
   opacity: 0.7;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .message-section .form-box form .gstInp input::placeholder {
+main .message-section .form-box form .innerForm .gstInp input::placeholder {
   opacity: 0.7;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .message-section .form-box form .cta {
+main .message-section .form-box form .innerForm .cta {
   height: 5rem;
-  background-color: transparent;
-  font-weight: 600;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.6rem;
   padding: 0.8rem 2rem;
   border-radius: 1rem;
-  margin-left: 2rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#4300a3), color-stop(#4d00aa), color-stop(#5700b1), color-stop(#6000b7), color-stop(#6a00be), color-stop(#7200c5), color-stop(#7b00cb), color-stop(#8300d2), color-stop(#8c00da), color-stop(#9500e2), color-stop(#9e00e9), to(#a700f1));
-  background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
-  color: #fff;
+  margin-left: 0rem;
+  background-color: transparent;
+  border: 0;
 }
 
-main .message-section::before {
-  content: " ";
-  position: absolute;
-  top: -5%;
-  left: 5%;
-  width: 25rem;
-  height: 25rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 81, 255, 0.4)), to(rgba(169, 0, 241, 0.2)));
-  background: linear-gradient(180deg, rgba(104, 81, 255, 0.4) 0%, rgba(169, 0, 241, 0.2) 100%);
-  -webkit-box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
-          box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
-  border-radius: 100%;
-}
-
-main .message-section::after {
-  content: " ";
-  position: absolute;
-  top: 8%;
-  left: 3%;
-  width: 15rem;
-  height: 15rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(104, 81, 255, 0.557)), to(rgba(169, 0, 241, 0.555)));
-  background: linear-gradient(180deg, rgba(104, 81, 255, 0.557) 0%, rgba(169, 0, 241, 0.555) 100%);
-  -webkit-box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
-          box-shadow: 0px 153px 179px rgba(0, 0, 0, 0.068), inset 0px 4px 97px rgba(255, 255, 255, 0.082);
-  border-radius: 100%;
+main .message-section .form-box form #existUser {
+  font-family: "silka-regular", sans-serif;
+  color: red;
+  font-size: 1.4rem;
 }
 
 main .section-2 {
@@ -1282,6 +1251,20 @@ main .section-6 .main-box {
   }
 }
 
+main .section-6 .main-box .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
 main .section-6 .main-box .box .img-box {
   position: relative;
 }
@@ -1360,7 +1343,7 @@ main .section-7 {
 
 main .section-7 .section-title {
   color: #fff;
-  font-size: 4.8rem;
+  font-size: 5.6rem;
   font-weight: 700;
   line-height: 6.7rem;
 }
