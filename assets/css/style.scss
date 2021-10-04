@@ -72,11 +72,25 @@ header{
         .navbar-collapse{
             font-size: 1.6rem;
             justify-content: flex-end;
+            
             padding-top: 2rem;
             .navbar-nav{
                 padding-left: 5rem;
+                align-items: center;
                 .nav-item{
                     padding: 0 0 0 2rem;
+                }
+            }
+            .navbar-right{
+                .login{
+                    font-family: $fontfamilyBold;
+                }
+                .signUp{
+                    font-family: $fontfamilyRegular;
+                    color: #fff;
+                    padding: 1rem 3rem;
+                    background: linear-gradient(#6851FF, #A700F1);
+                    border-radius: 1rem;
                 }
             }
         }
