@@ -363,10 +363,11 @@ header .navbar .navbar-brand img {
 }
 
 header .navbar .navbar-collapse {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-size: 1.6rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 2rem;
 }
 
 header .navbar .navbar-collapse .navbar-nav {

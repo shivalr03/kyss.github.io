@@ -70,8 +70,9 @@ header{
             }
         }
         .navbar-collapse{
-            justify-content: space-between;
             font-size: 1.6rem;
+            justify-content: flex-end;
+            padding-top: 2rem;
             .navbar-nav{
                 padding-left: 5rem;
                 .nav-item{
