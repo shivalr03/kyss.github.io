@@ -78,7 +78,7 @@ body .section-title {
   font-size: 2.175rem;
   font-weight: 700;
   line-height: 2.875rem;
-  color: #110656;
+  color: #000;
   margin-bottom: 1.075rem;
 }
 
@@ -300,7 +300,7 @@ body {
 .section-title {
   font-family: "silka-bold", Arial, sans-serif;
   margin-bottom: 1.6rem;
-  color: #110656;
+  color: #000;
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 4rem;
@@ -416,7 +416,7 @@ main .banner .left {
 }
 
 main .banner .left .banner-title {
-  color: #110656;
+  color: #000;
   font-size: 8rem;
   font-weight: 700;
   line-height: 7.8rem;

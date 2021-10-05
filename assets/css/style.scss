@@ -124,14 +124,15 @@ main{
             }
             .banner-title{
                 @include fontRender(#000, 5.4rem, 700, 1.4);
-                
+                font-size:5.4rem;
                 font-family: "silka-bold", Arial, sans-serif;
-                .highlight{
-                    // color: $brandBlueOne;
-                    background: -webkit-linear-gradient(#6851FF, #A700F1);
+                background: -webkit-linear-gradient(#6851FF, #A700F1);
     background-clip: border-box;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+                .highlight{
+                    // color: $brandBlueOne;
+                    
                 }
                 .second-line{
                     color: rgb(80, 78, 78);
@@ -220,18 +221,27 @@ main{
 
         @include respond(tab-land){
             padding: 12rem 5% 6rem;
+            clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
         }
         @include respond(phone){
             flex-direction: column;
             padding-top: 6rem;
+            clip-path: none;
         }
         .slider-container{
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include respond(phone){
+                flex-direction: column;
+            }
             .left{
                 width: 45%;
+                @include respond(phone){
+                    width: 100%;
+                    order: 1;
+                }
                 .main-swiper{
                     .swiper{
                         .swiper-slide:not(.swiper-slide-active){
@@ -242,17 +252,19 @@ main{
                                 @include fontRender(#000, 5.4rem, 700, 1.4);
                                 
                                 font-family: "silka-bold", Arial, sans-serif;
-                                .highlight{
-                                    // color: $brandBlueOne;
-                                    background: -webkit-linear-gradient(#6851FF, #A700F1);
+                                background: -webkit-linear-gradient(#6851FF, #A700F1);
                     background-clip: border-box;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                                .highlight{
+                                    // color: $brandBlueOne;
+                                    
                                 }
                                 .second-line{
-                                    color: rgb(80, 78, 78);
+                                    color: #000;
                                     padding: 1rem;
                                     text-decoration: underline;
+                                    -webkit-text-fill-color:#000;
                                 }
                             }
                             .banner-desc{
@@ -311,6 +323,9 @@ main{
             }
             .right{
                 width: 45%;
+                @include respond(phone){
+                    width: 100%;
+                }
                 .main-swiper{
                     .swiper{
                         .swiper-slide:not(.swiper-slide-active){
@@ -321,6 +336,9 @@ main{
             }
             .swiper-pagination{
                 bottom: 20%;
+                @include respond(phone){
+                    bottom: 2%;
+                }
                 .swiper-pagination-bullet {
                     height: 1.4rem;
                         width: 1.4rem;
@@ -348,6 +366,9 @@ main{
         margin: 6rem auto 6rem;
         border-radius: 0.4rem;
         // background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
+        @include respond(tab-land){
+            width: 90%;
+        }
         .section-title{
             text-align: left;
             font-size: 5.6rem;
@@ -357,6 +378,13 @@ main{
             color: #000;
             padding-top: 3rem;
             // width: 50%
+            @include respond(phone){
+                padding: 3rem 2rem;
+                font-size: 5rem;
+                text-align: center;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
         .breaknewline{
             @include respond(tab-port){
                 display: none;
@@ -365,6 +393,9 @@ main{
     }
     .section-1{
         padding: 3rem;
+        @include respond(phone){
+            padding-top: 0;
+        }
         .section-title{
                 text-align: center;
                 font-size: 5.6rem;
@@ -381,6 +412,9 @@ main{
             grid-template-columns: repeat(3, 1fr);
             padding: 8rem 0;
             align-items: baseline;
+            @include respond(tab-port){
+                padding: 8rem 2rem;
+            }
             @include respond(phone){
                 grid-template-columns: 1fr;
                 gap: 3rem 0;
@@ -403,7 +437,9 @@ main{
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 text-align: center;
-                    
+@include respond(tab-port){
+    font-size: 6rem;
+}
                 }
                 &:last-child{
                    .stat-number{
@@ -637,6 +673,7 @@ text-align: center;
             text-align: center;
             @include respond(phone){
                 width: 100%;
+                font-size: 5rem;
             }
             .highlight{
                 background: -webkit-linear-gradient(#6851FF, #A700F1);
@@ -689,10 +726,17 @@ text-align: center;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                @include respond(phone){
+                    flex-direction: column;
+                }
                 .left{
                     width: 30%;
                     margin: 0 auto;
                     padding-bottom: 4rem;
+                    @include respond(phone){
+                        width: 100%;
+                        order: 1;
+                    }
                     .box-title{
                                     @include fontRender($fontTitle, 4.2rem, 700, 1.4);
                                     padding: 2rem 0 3rem;
@@ -713,6 +757,9 @@ text-align: center;
                 }
                 .right{
                     width: 50%;
+                    @include respond(phone){
+                        width: 100%;
+                    }
                 }
             }
             .box-middle{
@@ -721,12 +768,19 @@ text-align: center;
                 align-items: center;
                 .left{
                     width: 50%;
+                    @include respond(phone){
+                        width: 100%;
+                    }
                     
                 }
                 .right{
                     width: 30%;
                     margin: 0 auto;
                     padding-bottom: 4rem;
+                    @include respond(phone){
+                        width: 100%;
+                        order: 1;
+                    }
                     .box-title{
                         @include fontRender($fontTitle, 4.2rem, 700, 1.4);
                         padding: 2rem 0 3rem;
@@ -899,10 +953,15 @@ background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6
         // background: $blueGradient;
         background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
         text-align: center;
-        @include respond(phone){
+        @include respond(tab-land){
             padding: 12rem 5%;
         }
+        @include respond(phone){
+            padding: 12rem 5%;
+            grid-template-columns: 1fr;
+        }
         .left{
+
             .section-title{
                 @include fontRender(#fff, 5.6rem, 700, 6.7rem);
                 margin-bottom: 5rem;
@@ -1020,19 +1079,34 @@ footer{
     .footer-top{
         background-color: #252f38;
         padding: 6rem 10% 4rem;
+        @include respond(tab-land){
+            padding: 6rem 5%;
+        }
         .main-box{
             display: flex;
             color: #fff;
             justify-content: space-between; 
+            @include respond(phone){
+                flex-direction: column;
+            }
             .box{
                 &:first-child{
                     width: 40%;
+                    @include respond(phone){
+                        width: 100%;
+                    }
                 }
                 &:nth-child(2){
                     width: 20%;
+                    @include respond(phone){
+                        width: 100%;
+                    }
                 }
                 &:last-child{
                     width: auto;
+                    @include respond(phone){
+                        width: 100%;
+                    }
                 }
                 .box-title{
                     font-family: $fontfamilyBold;
