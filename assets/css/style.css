@@ -377,8 +377,20 @@ header .navbar .navbar-collapse .navbar-nav {
           align-items: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  header .navbar .navbar-collapse .navbar-nav {
+    padding-left: 0;
+  }
+}
+
 header .navbar .navbar-collapse .navbar-nav .nav-item {
   padding: 0 0 0 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  header .navbar .navbar-collapse .navbar-nav .nav-item {
+    padding-bottom: 1rem;
+  }
 }
 
 header .navbar .navbar-collapse .navbar-right .login {
@@ -527,7 +539,7 @@ main .banner .left form .innerForm .cta {
   border: 0;
 }
 
-main .banner .left form #existUser {
+main .banner .left form .form-text {
   font-family: "silka-regular", sans-serif;
   color: red;
   font-size: 1.4rem;
@@ -919,6 +931,12 @@ main .message-section .form-box {
   width: 60%;
 }
 
+@media only screen and (max-width: 37.5em) {
+  main .message-section .form-box {
+    width: 90%;
+  }
+}
+
 main .message-section .form-box form .innerForm {
   display: -ms-grid;
   display: grid;
@@ -979,7 +997,7 @@ main .message-section .form-box form .innerForm .cta {
   border: 0;
 }
 
-main .message-section .form-box form #existUser {
+main .message-section .form-box form .form-text {
   font-family: "silka-regular", sans-serif;
   color: red;
   font-size: 1.4rem;
@@ -1608,6 +1626,8 @@ main .section-7 .right .zoho-form form #zohoBtn {
   width: 100%;
   font-weight: 500;
   font-style: normal;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#4300a3), color-stop(#4d00aa), color-stop(#5700b1), color-stop(#6000b7), color-stop(#6a00be), color-stop(#7200c5), color-stop(#7b00cb), color-stop(#8300d2), color-stop(#8c00da), color-stop(#9500e2), color-stop(#9e00e9), to(#a700f1));
+  background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
 }
 
 footer {

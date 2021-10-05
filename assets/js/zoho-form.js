@@ -1,24 +1,24 @@
 
-const button = document.querySelector('#submitGstin');
-let validateNumber = () => {
-    let gstn = document.querySelector('#inputGstinOne').value;
+const buttonZoho = document.querySelector('#submitGstin-1');
+let validateNumberZoho = () => {
+    let gstn = document.querySelector('#inputGstinTwo').value;
     // debugger;
-    document.querySelector('#inputGstinOne').classList.remove("error");
+    document.querySelector('#inputGstinTwo').classList.remove("error");
     if (gstn.length == 0 || gstn ==""){
 // console.log(gstn.length);
-document.querySelector('#inputGstinOne').focus();
-// document.querySelector('#inputGstinOne').classList.add("error");
-document.querySelector('#existUser').innerHTML = "Please enter GSTIN number";
+document.querySelector('#inputGstinTwo').focus();
+// document.querySelector('#inputGstinTwo').classList.add("error");
+document.querySelector('#existUserZoho').innerHTML = "Please enter GSTIN number";
 setTimeout(function(){
-  document.getElementById("existUser").innerHTML = '';
+  document.getElementById("existUserZoho").innerHTML = '';
 }, 3000);
-document.querySelector('#inputGstinOne').value = "";
+document.querySelector('#inputGstinTwo').value = "";
 console.log('empty')
 return false;
 }
 else if(gstn.length <= 14){
     console.log(gstn.length);
-    document.querySelector('#inputGstinOne').classList.add("error");
+    document.querySelector('#inputGstinTwo').classList.add("error");
     return false;
 }
 else{
@@ -34,12 +34,12 @@ else{
     }
     else{
       debugger;
-      document.querySelector('#existUser').innerHTML = "Enter correct GSTIN number";
+      document.querySelector('#existUserZoho').innerHTML = "Enter correct GSTIN number";
         setTimeout(function(){
-            document.getElementById("existUser").innerHTML = '';
+            document.getElementById("existUserZoho").innerHTML = '';
         }, 3000);
-        document.querySelector('#inputGstinOne').value = "";
-        document.querySelector('#inputGstinOne').focus();
+        document.querySelector('#inputGstinTwo').value = "";
+        document.querySelector('#inputGstinTwo').focus();
         console.log('Not success');
         return false;
         
@@ -55,12 +55,12 @@ else{
         console.log("already exists user");
         // let exsistuser = document.querySelector('#exsistuser');
         // let msg ="User already exists";
-        document.querySelector('#existUser').innerHTML = "User already exists";
+        document.querySelector('#existUserZoho').innerHTML = "User already exists";
         setTimeout(function(){
-            document.getElementById("existUser").innerHTML = '';
+            document.getElementById("existUserZoho").innerHTML = '';
         }, 3000);
-        document.querySelector('#inputGstinOne').value = "";
-        document.querySelector('#inputGstinOne').focus();
+        document.querySelector('#inputGstinTwo').value = "";
+        document.querySelector('#inputGstinTwo').focus();
         return false;
     }
     else
@@ -79,4 +79,4 @@ else{
     return true;
 }
 }
-button.addEventListener('click', validateNumber);
+buttonZoho.addEventListener('click', validateNumberZoho);

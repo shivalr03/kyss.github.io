@@ -77,8 +77,14 @@ header{
             .navbar-nav{
                 padding-left: 5rem;
                 align-items: center;
+                @include respond(tab-port){
+                    padding-left: 0;
+                }
                 .nav-item{
                     padding: 0 0 0 2rem;
+                    @include respond(tab-port){
+                        padding-bottom: 1rem;
+                    }
                 }
             }
             .navbar-right{
@@ -184,7 +190,7 @@ main{
                     border: 0;
                 }
             }
-            #existUser{
+            .form-text{
                 font-family: $fontfamilyRegular;
                 color: red;
                 font-size: 1.4rem;
@@ -474,6 +480,9 @@ text-align: center;
     }
     .form-box{
         width: 60%;
+        @include respond(phone){
+            width: 90%;
+        }
         form{
             .innerForm{
                 display: grid;
@@ -514,7 +523,7 @@ text-align: center;
                 border: 0;
             }
         }
-        #existUser{
+        .form-text{
             font-family: $fontfamilyRegular;
             color: red;
             font-size: 1.4rem;
@@ -1064,6 +1073,7 @@ background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6
                         width: 100%;
                         font-weight: 500;
                         font-style: normal;
+                        background-image: linear-gradient(to right bottom, #4300a3, #4d00aa, #5700b1, #6000b7, #6a00be, #7200c5, #7b00cb, #8300d2, #8c00da, #9500e2, #9e00e9, #a700f1);
                     }
                 }
             }
